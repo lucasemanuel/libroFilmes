@@ -1,0 +1,49 @@
+.banner-movie
+  display: flex
+  height: 20rem
+  background-size: cover
+  background-position: center
+  align-items: end
+  @media (min-width: 768px)
+    height: 32rem
+  @media (min-width: 1080px) and (min-height: 768px)
+    height: 44rem
+  .banner-movie-info
+    display: flex
+    flex-direction: column
+    height: 8rem
+    width: 100%
+    background-image: linear-gradient(#ffffff00, #ffffff)
+    justify-content: end
+    padding: 0 1rem
+    @media (min-width: 768px)
+      height: 10rem
+      padding: 0 4rem
+    h1
+      margin: 0
+      font-weight: 500
+      line-height: normal
+      padding-bottom: .4rem
+      @media (min-width: 768px)
+        font-size: 2rem
+      @media (min-width: 1080px)
+        font-size: 3rem
+    .movie-info-genres
+      display: flex
+      flex-wrap: wrap
+      span
+        padding: .2rem .4rem
+        font-size: .8rem
+        background: #333
+        color: white
+        border-radius: 1rem
+        margin-right: .2rem
+    .movie-info-release
+      margin-top: .4rem
+      font-weight: 500
+
+p
+  font-size: 1rem
+  padding: 1rem 1rem 0
+  @media (min-width: 768px)
+    padding: 1rem 4rem 0

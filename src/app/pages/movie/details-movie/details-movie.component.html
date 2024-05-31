@@ -1,0 +1,16 @@
+<main>
+  <div class="banner-movie"  [style.background-image]="'url(' + getUrlMovieImage(movie.backdropPath) + ')'">
+    <div class="banner-movie-info">
+      <h1>
+        {{ movie.title }}
+      </h1>
+      <div class="movie-info-genres">
+        <span *ngFor="let genre of movie.genres">{{ genre }}</span>
+      </div>
+      <span class="movie-info-release">Lançado em: {{ movie.releaseDate | date }}</span>
+    </div>
+  </div>
+  <p>
+    {{ movie.overview }}
+  </p>
+</main>

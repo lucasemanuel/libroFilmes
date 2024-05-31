@@ -1,0 +1,21 @@
+<main>
+  <ul>
+    <li *ngFor="let movie of movies$ | async">
+      <mat-card class="example-card" appearance="outlined" class="movie-card">
+        <img mat-card-image [src]="getUrlMovieImage(movie.posterPath)">
+        <mat-card-title class="movie-card-title">
+          {{ movie.title }}
+        </mat-card-title>
+        <mat-card-actions class="movie-card-actions">
+          <button mat-stroked-button color="primary" (click)="redirectFromDetails(movie.id)">Mais Detalhes</button>
+        </mat-card-actions>
+      </mat-card>
+    </li>
+  </ul>
+  <div class="loading" *ngIf="loading">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <div class="load-more">
+    <button mat-flat-button color="primary" (click)="loadMoreMovies()" class="load-more-button" [disabled]="loading">Carregue mais</button>
+  </div>
+</main>
